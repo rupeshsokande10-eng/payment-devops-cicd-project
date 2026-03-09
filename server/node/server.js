@@ -7,7 +7,7 @@ require('dotenv').config({ path: './.env' });
 // Ensure environment variables are set.
 checkEnv();
 
-const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY, {
+const stripe = require('stripe')("sk_test_dummy", {
   apiVersion: '2020-08-27',
   appInfo: { // For sample support and debugging, not required for production:
     name: "stripe-samples/checkout-one-time-payments",
